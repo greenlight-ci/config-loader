@@ -1,4 +1,4 @@
-![Greenlight Logo](https://github.com/greenlight-ci/brand/blob/master/logo/banner.svg)
+![Greenlight Logo](https://gitcdn.link/repo/greenlight-ci/brand/master/logo/banner.svg)
 
 # Config Loader [![version][npm-version]][npm-url] [![License][license-image]][license-url] [![Build Status][travis-image]][travis-url]
 
