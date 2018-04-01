@@ -14,17 +14,14 @@ schema.$async = true
 const ajv = new Ajv()
 const validate = ajv.compile(schema)
 
-const mandatory = () => {
+const required = () => {
   throw new Error('no config file found')
 }
 
-module.exports = path => {
-  return dir(path)
-    .then(files => files.find(name => regex.test(name)))
-    .then((name = mandatory()) => name)
-    .then(async name => [name, await file(join(path, name))])
-    .then(([name, content]) => {
-      switch (extname(name)) {
+function parse (filename) {
+  return file(filename)
+    .then(content => {
+      switch (extname(filename)) {
         case '.yml':
         case '.yaml':
           return safeLoad(content)
@@ -35,4 +32,16 @@ module.exports = path => {
     })
 
     .then(data => validate(data))
+}
+
+function discover (path) {
+  return dir(path)
+    .then(files => files.find(name => regex.test(name)))
+    .then((name = required()) => name)
+    .then(name => parse(join(path, name)))
+}
+
+module.exports = {
+  parse,
+  discover
 }
