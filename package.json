@@ -6,7 +6,7 @@
   "homepage": "https://greenlight.ci/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/greenlight-ci/config-loader.git"
+    "url": "https://github.com/greenlight/config-loader.git"
   },
   "license": "ISC",
   "main": "index.js",
@@ -24,7 +24,7 @@
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/greenlight-ci/config-loader/issues"
+    "url": "https://github.com/greenlight/config-loader/issues"
   },
   "scripts": {
     "test": "npm run test:tap",
