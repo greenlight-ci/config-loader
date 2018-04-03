@@ -1,6 +1,6 @@
 repository:
   name: config-loader
-  description: Finds and loads compatible Greenlight config files
+  description: 🛠️ Finds and loads compatible Greenlight config files
   topics: greenlight, config
   homepage: https://greenlight.ci/
   private: false
